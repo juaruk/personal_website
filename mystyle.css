@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
+:root {
+    --bg-volcano: #0c0201;
+    --pinkish-text: #ceaba7;
+    --accent: #cd2905;
+    --header: #3e0902;
+    --section: #754249;
+    --darker-section: #250801;
+    --name: #a8d4c3;
+    --dark-mint: #baead8;
+    --photos: #02211f;
+    --main-font: 'Gloock'
+    --secondary-font: 'Roboto'
+}
+body {
+    background-color: var(--bg-volcano); /* Warm light background */
+    color: var(--pinkish-text); /* Dark warm text color */
+    font-family: 'Roboto', sans-serif; /* Clean, readable font */
+    font: weight 10px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+
+header {
+    background-color: var(--header); /* Vibrant warm color */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--header-text); /* Warm dark color for headings */
+    font-family: Georgia, sans-serif; /* More elegant font for headings */
+    font-weight:400;
+    margin-bottom: 20px;
+}
+
+h1{
+    font-size:30px;
+    text-align: center
+}
+
+h2{
+    color: #f87658;
+    font-size:25px;
+}
+
+
+/* General navbar styling */
+/* General navbar styling */
+.navbar {
+    background-color: var(--header); /* Dark background color */
+    padding: 10px 20px; /* Add padding for spacing */
+    display: flex; /* Ensure the navbar itself is a flex container */
+    justify-content: space-between; /* Space between the name and links */
+    align-items: center; /* Center items vertically */
+}
+
+/* Styling for the list within the navbar */
+.navbar ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Display list items in a row */
+    gap: 17px; /* Space between links */
+    align-items: center; /* Center items vertically */
+}
+
+/* Styling for list items */
+.navbar ul li {
+    margin: 0; /* Remove default margin from list items */
+    padding: 0; /* Remove default padding if needed */
+}
+
+/* Styling for the name section */
+.navbar .name {
+    color: var(--name); /* Peach cream color */
+    text-decoration: none; /* Remove underline */
+    background-color: var(--photos); /* Darker background color on hover */
+    border-radius: 6px; 
+    padding: 15px;
+    font-size: 150%; /* Larger font size */
+    font-family: 'Gloock', 'Georgia'; /* Font for name */
+}
+
+/* Styling for the links */
+.navbar a {
+    color: var(--pinkish-text); /* Peach cream color */
+    text-decoration: none; /* Remove underline */
+    text-align: center;
+    padding: 13px; /* Padding around the link text */
+    font-family: 'Gloock', 'Georgia'; /* Font for links */
+    font-size: 80%;
+    display: block; /* Block display for links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+.navbar a:hover {
+    background-color: var(--accent); /* Darker background color on hover */
+    border-radius: 6px; /* Optional: rounded corners for hover effect */
+    color: var(--mint-text); /* Optional: change text color on hover for better contrast */
+    font-size: 90%;
+
+}
+
+/* Ensuring links take full space of list items */
+.navbar ul li a {
+    display: block; /* Ensure links take full space of list items */
+}
+
+/* General navbar styling */
+/* General navbar styling */
+.footer_navbar {
+    background-color: var(--header); /* Dark background color */
+    padding: 10px 20px; /* Add padding for spacing */
+    display: flex; /* Ensure the navbar itself is a flex container */
+    justify-content: space-between; /* Space between the name and links */
+    align-items: center; /* Center items vertically */
+}
+
+/* Styling for the list within the navbar */
+.footer_navbar ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Display list items in a row */
+    gap: 17px; /* Space between links */
+    align-items: center; /* Center items vertically */
+}
+
+/* Styling for list items */
+.footer_navbar ul li {
+    margin: 0; /* Remove default margin from list items */
+    padding: 0; /* Remove default padding if needed */
+}
+
+/* Styling for the name section */
+.footer_navbar .name {
+    color: var(--name); /* Peach cream color */
+    text-decoration: none; /* Remove underline */
+    background-color: var(--photos); /* Darker background color on hover */
+    border-radius: 6px; 
+    padding: 15px;
+    font-size: 150%; /* Larger font size */
+    font-family: 'Gloock', 'Georgia'; /* Font for name */
+}
+
+/* Styling for the links */
+.footer_navbar a {
+    color: var(--pinkish-text); /* Peach cream color */
+    text-decoration: none; /* Remove underline */
+    text-align: center;
+    padding: 13px; /* Padding around the link text */
+    font-family: 'Gloock', 'Georgia'; /* Font for links */
+    font-size: 80%;
+    display: block; /* Block display for links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+.footer_navbar a:hover {
+    background-color: var(--accent); /* Darker background color on hover */
+    border-radius: 6px; /* Optional: rounded corners for hover effect */
+    color: var(--mint-text); /* Optional: change text color on hover for better contrast */
+    font-size: 90%;
+
+}
+
+/* Ensuring links take full space of list items */
+.footer_navbar ul li a {
+    display: block; /* Ensure links take full space of list items */
+}
+
+.image_container {
+    position: relative;
+    width: 100%;
+    height: 85vh; /* Adjust as needed */
+    background-image: url('Landing_Page.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.image_container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Adjust the height of the gradient overlay as needed */
+    background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--bg-volcano) 100%);
+    background-size: cover;
+    z-index: 1; /* Ensure the gradient is on top of the image */
+}
+.geode{
+    transform: scale(0.8);
+    display: block;
+}
+.center {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%; /* Adjust to control the width of the centered element */
+    z-index: 2; /* Ensure the centered content is on top of the gradient */
+}
+.border_container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 90vh;
+    height: 85vh; /* Adjust as needed */
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    background-image: url('canyon_border.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Image acting as a border */
+
+.oval_text_container {
+    position: absolute;
+    background-size: contain;
+    top: 48%;
+    left: 50%;
+    transform: translate(-70%, -33%);
+    width: 35%; /* Adjust size for the oval */
+    height: 43%; /* Adjust height for the oval */
+    background-color: var(--darker-section); /* Dark semi-transparent background */
+    opacity: 0.95;
+    color: var(--dark-mint);
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    border-radius: 50%; /* Creates a perfect oval */
+    text-align: center;
+    padding: 0px;
+    font-size: 100%;
+}
+
+.flex-box{
+    display: flex;
+    flex-wrap: wrap;
+    /*grid-template-columns: repeat(2, 1fr); /* Create 2 equal-width columns */
+    /*grid-template-rows: repeat(2, 1fr); /* Create 2 equal-height rows */
+    gap: 0px;
+    row-gap: 0px;
+    padding: 0px;
+    /*width: 100vw; /* Full width of the container */
+    /*max-width: 50%;
+    height: 100vh; /* Full viewport height */
+    justify-items: center;
+    background-size:cover;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden
+}
+
+.style1 {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adjust spacing between image and text */
+    margin: 20px 0; /* Adjust top and bottom margins */
+}
+
+.style1 img {
+    width: 45vh;
+    height: 45vh; /* Adjust as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+.style1 p {
+    margin: 0; /* Remove default margin for better alignment */
+    font-size: 14px; /* Adjust text size if needed */
+}
+
+.tech-skills {
+    list-style-type: none; /* Remove default list styling */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    padding: 0; /* Remove default padding */
+}
+
+.tech-skills li {
+    margin: 10 px; /* Space between list items */
+}
+
+.tech-button {
+    background-color: var(--section); 
+    color: var(--bg-volcano); 
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button text */
+    text-align:center;
+    height: 10vw;
+    width: 25vh;
+}
+
+.tech-button:hover {
+    background-color: var(--name); /* Darker blue on hover */
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between polaroid items */
+  }
+
+  /* Polaroid styling for each photo container */
+  .polaroid {
+    background: var(--section);
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Space below each polaroid */
+  }
+
+  /* Image within the Polaroid */
+  .polaroid img {
+    width: 100%;
+    height: 80%;
+    display: block;
+  }
+
+  /* Caption under the image */
+  .caption {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--pinkish-text);
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+input, textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.blog-post {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post h3 {
+    margin-top: 0;
+}

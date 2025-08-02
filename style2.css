@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --bg-light-blue: #E1E3E5; /* Light blue background */
+    --text-dark-blue: #214364; /* Dark blue text color */
+    --accent-blue: #6c926a; /* Accent blue color */
+    --header-blue: #8BB9F5; /* Header blue color */
+    --section-light-blue: #FFE050; /* Light blue section color */
+    --darker-blue: #214364; /* Darker blue for sections */
+    --name-light-blue: hsl(116, 49%, 12%); /* Light blue for names */
+    --dark-mint: #C8E6C9; /* Light mint color for contrast */
+    --photo-dark-blue: #3f413f; /* Dark blue for photo sections */
+    --main-font: 'Montserrat', sans-serif; /* Elegant serif font for headings and emphasis */
+    --secondary-font: 'Lora', sans-serif; /* Clean sans-serif font for body text */
+}
+
+body {
+    background-color: var(--bg-light-blue); /* Light pink background */
+    color: var(--text-dark-blue); /* Dark pink text color */
+    font-family: var(--secondary-font); /* Secondary font for body text */
+    margin: 0;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+    box-sizing: border-box;
+    text-align:center;
+}
+
+header {
+    background-color: var(--header-blue); /* Vibrant pink color */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-dark-blue); /* Dark pink color for headings */
+    font-family: var(--main-font); /* Font for headings */
+    font-weight: 700; /* Bold font weight for emphasis */
+    margin-bottom: 20px;
+    text-align: center
+}
+
+h1 {
+    font-size: 30px;
+    text-align: right;
+    z-index: 5;
+    position: absolute;
+    top: 15%; /* Adjust vertical position within the clipped area */
+    left: 50%; /* Adjust horizontal position within the clipped area */
+    width: 40%; /* Adjust width as needed */
+    padding-right: 20px;
+    font-style: italic;
+    box-sizing: content-box;
+    background-color: #FFE050;
+
+}
+
+h2 {
+    color: var(--accent-blue);
+    font-size: 25px;
+    font-style: italic;
+}
+
+/* General navbar styling */
+.navbar {
+    background-color: var(--header-blue); /* Dark background color */
+    padding: 10px 20px; /* Add padding for spacing */
+    display: flex; /* Ensure the navbar itself is a flex container */
+    flex-direction: column;
+    justify-content: space-between; /* Space between the name and links */
+    position: fixed; /* Fix the navbar to the side of the page */
+    top: 0;
+    left: 0; 
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/* Styling for the list within the navbar */
+.navbar ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Display list items in a row */
+    flex-direction: column;
+    gap: 17px; /* Space between links */
+
+}
+
+/* Styling for list items */
+.navbar ul li {
+    margin: 0; /* Remove default margin from list items */
+    padding: 0; /* Remove default padding if needed */
+}
+
+/* Styling for the name section */
+.navbar .name {
+    color: var(--photo-dark-blue); /* Light pink color */
+    text-decoration: none; /* Remove underline */
+    background-color: var(--section-light-blue); /* Dark pink background */
+    border-radius: 6px; 
+    padding: 15px;
+    font-size: 150%; /* Larger font size */
+    font-family: var(--main-font); /* Font for the name */
+}
+.links {
+    display: flex; /* Show content by default */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.links.collapsed {
+    display: none;
+}
+
+/* Styling for the links */
+.navbar a {
+    color: var(--text-dark-blue); /* Dark pink text color */
+    text-decoration: none; /* Remove underline */
+    text-align: center;
+    padding: 13px; /* Padding around the link text */
+    font-family: var(--secondary-font); /* Font for links */
+    font-size: 80%;
+    display: block; /* Block display for links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+.navbar a:hover {
+    background-color: var(--accent-blue); /* Accent pink on hover */
+    border-radius: 6px; /* Optional: rounded corners for hover effect */
+    color: var(--darker-blue); /* Change text color on hover */
+    font-size: 90%;
+}
+
+/* Ensuring links take full space of list items */
+.navbar ul li a {
+    display: block; /* Ensure links take full space of list items */
+}
+
+/* General navbar styling */
+.footer_navbar {
+    background-color: var(--header-blue); /* Navy background color */
+    padding: 15px 25px; /* Add padding for spacing */
+    display: flex; /* Flex container for navbar */
+    justify-content: space-between; /* Space between the name and links */
+    align-items: center; /* Center items vertically */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+
+}
+
+/* Styling for the list within the navbar */
+.footer_navbar ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Display list items in a row */
+    gap: 20px; /* Space between links */
+    align-items: center; /* Center items vertically */
+}
+
+/* Styling for list items */
+.footer_navbar ul li {
+    margin: 0; /* Remove default margin from list items */
+    padding: 0; /* Remove default padding if needed */
+}
+
+/* Styling for the links */
+.footer_navbar a {
+    color: var(--photo-dark-blue); /* Dark gray color for links */
+    text-decoration: none; /* Remove underline */
+    text-align: center;
+    padding: 12px; /* Padding around the link text */
+    font-family: var(--secondary-font); /* Sans-serif font for links */
+    font-size: 90%;
+    display: block; /* Block display for links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+.footer_navbar a:hover {
+    background-color: var(--accent-blue); /* Teal background color on hover */
+    border-radius: 8px; /* Rounded corners for hover effect */
+    color: #FFFFFF; /* White text color on hover */
+    font-size: 95%;
+}
+
+/* Ensuring links take full space of list items */
+.footer_navbar ul li a {
+    display: block; /* Ensure links take full space of list items */
+}
+
+/* Updated layout with a vertical stack and new image shape */
+.style1 {
+    display: block; /* Stacks elements vertically */
+    text-align: center; /* Centers text */
+    margin: 25px 0; /* Adjust top and bottom margins */
+}
+
+.style1 img {
+    width: 40vh;
+    height: 40vh; /* Adjust as needed */
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    object-fit: cover; /* Ensures the image covers the container */
+    margin-bottom: 15px; /* Adds space between the image and text */
+}
+
+.style1 p {
+    margin: 0;
+    font-size: 16px; /* Adjusted text size */
+    color: #333; /* A dark gray for better readability */
+    line-height: 1.6; /* Increased line height for readability */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between polaroid items */
+}
+
+/* Polaroid styling */
+.polaroid {
+    position: relative;
+    width: 180px; /* Adjust as needed */
+    height: 240px; /* Adjust as needed */
+    overflow: hidden; /* Hide overflow */
+    transition: transform 0.6s;
+    /* Adding a z-index to ensure the caption appears on top */
+}
+
+/* Image styling */
+.polaroid img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.6s;
+}
+
+/* Caption styling */
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: var(--accent-blue);
+    font-family: var(--main-font);
+    font-size: 25px; /* Adjust font size as needed */
+    padding: 5px;
+    text-align: center;
+    opacity: 0; /* Hide initially */
+    visibility: hidden; /* Hide initially */
+    transition: opacity 0.6s, visibility 0.6s; /* Smooth transition */
+    z-index: 1; /* Ensure caption is on top */
+}
+
+/* Hover effect for polaroid */
+.polaroid:hover img {
+    opacity: 0; /* Hide the image when hovered */
+}
+
+.polaroid:hover .caption {
+    opacity: 1; /* Show the caption when hovered */
+    visibility: visible; /* Make caption visible */
+}
+
+.tech-skills {
+    list-style-type: none; /* Remove default list styling */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    padding: 0; /* Remove default padding */
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.tech-skills li {
+    margin: 10 px; /* Space between list items */
+}
+
+.tech-button {
+    background-color: var(--photo-dark-blue); 
+    color: var(--accent-blue); 
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding inside the button */
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button text */
+    text-align:center;
+    height: 10vw;
+    width: 25vh;
+    transition: transform 0.3s ease;
+}
+
+.tech-button:hover {
+    background-color: var(--section-light-blue); /* Darker blue on hover */
+    transform: rotate(45deg) scale(1.05);
+}
+
+.image_container {
+    position: relative;
+    width: 100%;
+    height: 85vh; /* Adjust as needed */
+    background-image: url('Landing_Page_2.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    clip-path:polygon(0 0, 0% 100%, 100% 100%);
+} 
+
+.image_container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Adjust the height of the gradient overlay as needed */
+    background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--bg-light-blue) 100%);
+    background-size: cover;
+    z-index: 1; /* Ensure the gradient is on top of the image */
+}
+
+.geode {
+    display: block; 
+    position: absolute;
+    width: 100vw; /* Ensure each slide takes up the full width of the container */
+    height: 100vh; /* Ensure each slide takes up the full height of the container */
+    justify-content: center;
+    justify-items: center;
+    top: 120%;
+    left: 40%;
+    object-fit: cover;
+    transform:scale(1.4);
+}
+
+.center {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%; /* Adjust to control the width of the centered element */
+    z-index: 3; /* Ensure the centered content is on top of the gradient */
+}
+
+.border_container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden;
+    position: relative;
+    width: 90vh;
+    height: 85vh; /* Adjust as needed */
+    background-image: url('sunflower-border.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/* Image acting as a border */
+
+/* Oval text container */
+.oval_text_container {
+    position: absolute;
+    clip-path: circle(); /* Ensures the element is circular */
+    width: 35%; /* Adjust size for the oval */
+    height: 43%; /* Adjust height for the oval */
+    background-color: var(--dark-mint); /* Darker pink background */
+    opacity: 0.85;
+    color: var(--text-dark-blue);
+    display: flex; /* Flexbox for centering the text */
+    flex-wrap: wrap;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    top: 50%; /* Center vertically in the parent */
+    left: 50%; /* Center horizontally in the parent */
+    transform: translate(-50%, -50%); /* Proper centering accounting for the oval size */
+    text-align: center;
+}
+
+.flex-box {
+    display: flex;
+    flex-wrap: nowrap; 
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100%; 
+    justify-content: center; 
+    align-items: center;
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+input, textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.blog-post {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post h3 {
+    margin-top: 0;
+}
